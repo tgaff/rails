@@ -4,6 +4,7 @@
 # When the client-side upload is completed, the signed_blob_id can be submitted as part of the form to reference
 # the blob that was created up front.
 class ActiveStorage::DirectUploadsController < ActiveStorage::BaseController
+skip_forgery_protection
   def create
     blob = ActiveStorage::Blob.create_before_direct_upload!(blob_args)
     render json: direct_upload_json(blob)
