@@ -29,7 +29,6 @@
     "webpack": "^3.4.0"
   },
   "scripts": {
-    "prebuild": "yarn lint",
     "build": "webpack -p",
     "lint": "eslint app/javascript",
     "prepublishOnly": "rm -rf src && cp -R app/javascript/activestorage src"
